@@ -38,6 +38,10 @@ UIResponder和UIGestureRecognizer有相同签名的事件处理方法
 * exclusiveTouch
 * hitTest:withEvent:
 
+永久禁止接收事件：userInteractionEnabled
+
+临时就是接收事件：beginIgnoringInteractionEvents、endIgnoringInteractionEvents
+
 ## InterCepting Touches by Overriding Hit-Testing
 
 ## Forwarding Touch Events
