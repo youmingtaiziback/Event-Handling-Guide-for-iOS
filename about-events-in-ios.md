@@ -18,6 +18,12 @@
 
 ## Prerequisites
 
+_Start Developing iOS Apps Today_
+
+_View Programming Guide for iOS_
+
+_View Controller Programming Guide for iOS_
+
 ## See Also
 
 _Location and Maps Programming Guide_
