@@ -54,6 +54,8 @@ gesture recognizer处理事件的优先级高于event handling
 
 #### Interacting with Other User Interface Controls
 
+iOS 6以后，往control的superview添加的手势会被control阻止。如果要改变control的默认行为，可以继承control的子类然后把手势添加到control上面
+
 ## Gesture Recognizers Interpret Raw Touch Events
 
 ## Regulating the Delivery of Touches to Views
