@@ -16,8 +16,8 @@ UIApplication、APPDelegate、UIView、UIViewController都是UIResponder的直�
 
 一个对象成为第一响应者的方法：
 
-* canBecomeFirstResponder
-* becomeFirstResponder
+* `canBecomeFirstResponder`
+* `becomeFirstResponder`
 
 ## The Responder Chain Follows a Specific Delivery Path
 
