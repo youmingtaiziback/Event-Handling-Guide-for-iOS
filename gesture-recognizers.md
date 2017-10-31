@@ -10,6 +10,10 @@ _iOS Human Interface Guidelines_
 
 #### Gesture Recognizers Are Attached to a View
 
+view和gesture recognizer是1对N的关系
+
+gesture recognizer处理事件的优先级高于event handling
+
 #### Gestures Trigger Action Messages
 
 ## Responding Events with Gesture Recognizers
