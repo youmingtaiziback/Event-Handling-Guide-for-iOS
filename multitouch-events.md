@@ -44,7 +44,14 @@ UIResponder和UIGestureRecognizer有相同签名的事件处理方法
 
 ## InterCepting Touches by Overriding Hit-Testing
 
+覆盖hitTest:withEvent:
+
 ## Forwarding Touch Events
+
+分析事件的方法
+
+* 加一层superview
+* 覆盖UIWindow的sendEvent:方法，一定要调用\[super sendEvent:\]
 
 ## Best Practices for Handling Multitouch Events
 
