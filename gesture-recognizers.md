@@ -20,7 +20,35 @@ gesture recognizer处理事件的优先级高于event handling
 
 ## Responding Events with Gesture Recognizers
 
+#### Using Interface Builder to Add a Gesture Recognizer to Your App
+
+#### Adding a Gesture Recognizer Programmatically
+
+#### Responding to Discrete Gestures
+
+#### Responding to Continuous Gestures
+
 ## Defining How Gesture Recognizers Interact
+
+#### Gesture Recognizers Operate in a Finite State Machine
+
+![](/assets/import.png)
+
+#### Interacting with Other Gesture Recognizers
+
+默认条件下，同一个view上面的多个gesture recognizer哪一个现接受事件是不确定的
+
+影响多个gesture recognizer接受事件顺序的方式有
+
+* UIGestureRecognizer类方法
+  * 两个gesture recognizer之间指定顺序：\[a requireGestureRecognizerToFail:b\]，a一直等待，直到b失败a才开始接受事件
+* 代理方法
+  * 禁止gesture recognizer处理事件
+    * gestureRecognizer:shouldReceiveTouch:，只要有新的touch事件就会被调用。UIView和UIGestureRecognizer都有该方法
+    * gestureRecognizerShouldBegin:，gesture recognizer尝试从Possible状态转移出去的时候调用
+* 覆盖子类方法
+
+#### Interacting with Other User Interface Controls
 
 ## Gesture Recognizers Interpret Raw Touch Events
 
