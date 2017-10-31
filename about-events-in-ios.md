@@ -18,6 +18,10 @@ UIKit提供的处理事件机制：UIControl的子类、gesture recognizer（预
 
 #### An App Receives Motion Events When User Move Their Devices
 
+Motion: location, orientation, movement
+
+Core Motion framework: 加速器、陀螺仪
+
 #### An App Receives Remote Control Events When User Manipulate Multimedia Controls
 
 ## Prerequisites
