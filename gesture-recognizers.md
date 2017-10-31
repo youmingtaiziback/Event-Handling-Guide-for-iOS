@@ -16,6 +16,8 @@ gesture recognizer处理事件的优先级高于event handling
 
 #### Gestures Trigger Action Messages
 
+离散手势、连续手势
+
 ## Responding Events with Gesture Recognizers
 
 ## Defining How Gesture Recognizers Interact
