@@ -41,16 +41,16 @@ gesture recognizer处理事件的优先级高于event handling
 影响多个gesture recognizer接受事件顺序的方式有
 
 * UIGestureRecognizer类方法
-  * 两个gesture recognizer之间指定顺序：\[a requireGestureRecognizerToFail:b\]，a一直等待，直到b失败a才开始接受事件
+  * 两个gesture recognizer之间指定顺序：`[a requireGestureRecognizerToFail:b]`，a一直等待，直到b失败a才开始接受事件
 * 代理方法
   * 禁止gesture recognizer处理事件
-    * gestureRecognizer:shouldReceiveTouch:，只要有新的touch事件就会被调用。UIView和UIGestureRecognizer都有该方法
-    * gestureRecognizerShouldBegin:，gesture recognizer尝试从Possible状态转移出去的时候调用
+    * `gestureRecognizer:shouldReceiveTouch:`，只要有新的touch事件就会被调用。UIView和UIGestureRecognizer都有该方法
+    * `gestureRecognizerShouldBegin:`，gesture recognizer尝试从Possible状态转移出去的时候调用
   * 支持同时识别手势
-    * gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:该方法只会在一个手势试图阻止另一个手势时被调用，两个手势中只需要一个代理方法返回YES
+    * `gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:`该方法只会在一个手势试图阻止另一个手势时被调用，两个手势中只需要一个代理方法返回YES
 * 覆盖子类方法
   * 两个手势之间支持单向关系
-    * 子类实现canPreventGestureRecognizer:或者canBePreventedByGestureRecognizer:
+    * 子类实现`canPreventGestureRecognizer:`或者`canBePreventedByGestureRecognizer:`
 
 #### Interacting with Other User Interface Controls
 
@@ -68,7 +68,7 @@ iOS 6以后，往control的superview添加的手势会被control阻止。如果�
 
 #### Gesture Recognizers Get the First Opportunity to Recognize a Touch
 
-默认行为，当view上面有gesture Recognizer的时候，二者同时接受事件，但是系统会在view的touchesEnded:withEvent:阶段等待gesture Recognizer
+默认行为，当view上面有gesture Recognizer的时候，二者同时接受事件，但是系统会在view的`touchesEnded:withEvent:`阶段等待gesture Recognizer
 
 对于离散的手势：如果手势被识别，则系统取消发送给view的事件
 
@@ -78,8 +78,8 @@ iOS 6以后，往control的superview添加的手势会被control阻止。如果�
 
 通过改变UIGestureRecognizer的属性可以改变事件的传递路径
 
-* delaysTouchesBegan：默认为NO
-* delaysTouchesEnded：默认YES，设置NO时，view和手势同时接收事件，但是如果手势被识别，view的touchesCancelled:withEvent:将被调用
+* `delaysTouchesBegan`：默认为NO
+* `delaysTouchesEnded`：默认YES，设置NO时，view和手势同时接收事件，但是如果手势被识别，view的`touchesCancelled:withEvent:`将被调用
 
 ## Create a Custom Gesture Recognizer
 
