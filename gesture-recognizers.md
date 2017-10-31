@@ -58,6 +58,12 @@ iOS 6以后，往control的superview添加的手势会被control阻止。如果�
 
 ## Gesture Recognizers Interpret Raw Touch Events
 
+#### An Event Contains All the Touches for the Current Multitouch Sequence
+
+一个event对应一个多点触控过程，里面包含多个touch，每一个touch对应于一个手指的动作。touch的属性包括相位、位置、前一个位置、时间戳
+
+#### An App Receives Touches in the Touch-Handling Methods
+
 ## Regulating the Delivery of Touches to Views
 
 ## Create a Custom Gesture Recognizer
