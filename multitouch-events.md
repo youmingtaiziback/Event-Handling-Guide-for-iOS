@@ -34,13 +34,13 @@ UIResponder和UIGestureRecognizer有相同签名的事件处理方法
 
 影响事件流的方法
 
-* multipleTouchEnabled
-* exclusiveTouch
-* hitTest:withEvent:
+* `multipleTouchEnabled`
+* `exclusiveTouch`
+* `hitTest:withEvent:`
 
-永久禁止接收事件：userInteractionEnabled
+永久禁止接收事件：`userInteractionEnabled`
 
-临时就是接收事件：beginIgnoringInteractionEvents、endIgnoringInteractionEvents
+临时就是接收事件：`beginIgnoringInteractionEvents`、`endIgnoringInteractionEvents`
 
 ## InterCepting Touches by Overriding Hit-Testing
 
@@ -51,7 +51,7 @@ UIResponder和UIGestureRecognizer有相同签名的事件处理方法
 分析事件的方法
 
 * 加一层superview
-* 覆盖UIWindow的sendEvent:方法，一定要调用\[super sendEvent:\]
+* 覆盖UIWindow的`sendEvent:`方法，一定要调用`[super sendEvent:]`
 
 ## Best Practices for Handling Multitouch Events
 
