@@ -28,9 +28,15 @@ UIResponder和UIGestureRecognizer有相同签名的事件处理方法
 
 如果需要保存touch，需要用CFDictionaryRef而不能用NSDictionary，因为后者需要对象实现NSCopying协议
 
-如何判断最后一个手指离开了界面：\[touches count\] == \[\[event touchesForView:self\] count\]
+如何判断最后一个手指离开了界面：`[touches count] == [[event touchesForView:self] count]`
 
 ## Specifying Custom Touch Event Behavior
+
+影响事件流的方法
+
+* multipleTouchEnabled
+* exclusiveTouch
+* hitTest:withEvent:
 
 ## InterCepting Touches by Overriding Hit-Testing
 
