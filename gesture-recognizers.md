@@ -49,6 +49,8 @@ gesture recognizer处理事件的优先级高于event handling
   * 支持同时识别手势
     * gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:该方法只会在一个手势试图阻止另一个手势时被调用，两个手势中只需要一个代理方法返回YES
 * 覆盖子类方法
+  * 两个手势之间支持单向关系
+    * 子类实现canPreventGestureRecognizer:或者canBePreventedByGestureRecognizer:
 
 #### Interacting with Other User Interface Controls
 
