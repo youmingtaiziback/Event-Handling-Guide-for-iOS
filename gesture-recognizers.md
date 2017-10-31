@@ -66,6 +66,21 @@ iOS 6以后，往control的superview添加的手势会被control阻止。如果�
 
 ## Regulating the Delivery of Touches to Views
 
+#### Gesture Recognizers Get the First Opportunity to Recognize a Touch
+
+默认行为，当view上面有gesture Recognizer的时候，二者同时接受事件，但是系统会在view的touchesEnded:withEvent:阶段等待gesture Recognizer
+
+对于离散的手势：如果手势被识别，则系统取消发送给view的事件
+
+对于连续的手势：如果手势开始了began状态，view将不再接收事件
+
+#### Affecting the Delivery of Touches to Views
+
+通过改变UIGestureRecognizer的属性可以改变事件的传递路径
+
+* delaysTouchesBegan：默认为NO
+* delaysTouchesEnded：默认YES，设置NO时，view和手势同时接收事件，但是如果手势被识别，view的touchesCancelled:withEvent:将被调用
+
 ## Create a Custom Gesture Recognizer
 
 
