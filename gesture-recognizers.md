@@ -46,6 +46,8 @@ gesture recognizer处理事件的优先级高于event handling
   * 禁止gesture recognizer处理事件
     * gestureRecognizer:shouldReceiveTouch:，只要有新的touch事件就会被调用。UIView和UIGestureRecognizer都有该方法
     * gestureRecognizerShouldBegin:，gesture recognizer尝试从Possible状态转移出去的时候调用
+  * 支持同时识别手势
+    * gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:该方法只会在一个手势试图阻止另一个手势时被调用，两个手势中只需要一个代理方法返回YES
 * 覆盖子类方法
 
 #### Interacting with Other User Interface Controls
