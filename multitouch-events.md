@@ -16,6 +16,10 @@ UIResponder和UIGestureRecognizer有相同签名的事件处理方法
 
 ## Receiving and Querying Touch Objects
 
+`multiTouchEnabled`默认为NO，此时事件处理方法每次被调用时touches里面只包含一个touch。如果设置为YES，包含多个
+
+`touchesForWindow:`、`touchesForView:`
+
 ## Handling Tap Gestures
 
 ## Handling Swipe and Drag Gestures
