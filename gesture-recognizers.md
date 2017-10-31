@@ -83,5 +83,27 @@ iOS 6以后，往control的superview添加的手势会被control阻止。如果�
 
 ## Create a Custom Gesture Recognizer
 
+包含`UIGestureRecognizerSubclass.h`
+
+```
+- (void)reset;
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event;
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event;
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event;
+
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event;
+```
+
+和事件处理有相同的方法定义
+
+#### Implementing the Touch-Event Handling Methods for a Custom Gesture Recognizer
+
+自定义手势最重要的事情就是处理state的状态
+
+#### Resetting a Gesture Recognizer’s State
+
 
 
