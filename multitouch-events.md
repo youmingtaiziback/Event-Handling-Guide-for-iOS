@@ -55,17 +55,12 @@ UIResponder和UIGestureRecognizer有相同签名的事件处理方法
 
 ## Best Practices for Handling Multitouch Events
 
-实现取消方法
-
-如果在UIView、UIViewController、UIResponder的子类处理事件：实现所有方法、不调用super的实现
-
-如果在UIKit的其他Responder的子类处理了事件：无需实现所有方法、必须调用super的实现
-
-不要向自己定义的UIView子类以外的Responder转发事件
-
-不显示调用nextResponder，调用superclass的实现
-
-不使用近似取整
+* 实现取消方法
+* 如果在UIView、UIViewController、UIResponder的子类处理事件：实现所有方法、不调用super的实现
+* 如果在UIKit的其他Responder的子类处理了事件：无需实现所有方法、必须调用super的实现
+* 不要向自己定义的UIView子类以外的Responder转发事件
+* 不显示调用nextResponder，调用superclass的实现
+* 不使用近似取整
 
 ## 
 
