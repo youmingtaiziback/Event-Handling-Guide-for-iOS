@@ -20,6 +20,14 @@
 
 ## See Also
 
+_Location and Maps Programming Guide_
+
+示例代码
+
+* Simple Gesture Recognizer
+* Handling Touches Using Responder Methods and GestureRecognizers
+* MoveMe
+
 ## 
 
 
